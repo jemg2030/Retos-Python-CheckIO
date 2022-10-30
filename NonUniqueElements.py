@@ -68,11 +68,11 @@ def checkio(data):
     size = len(data)
     copyData = []
 
-    if ((size > 0) and (size <= 1000)):
+    if (size > 0) and (size <= 1000):
         for i in range(size):
             element = data[i]
             repeated = data.count(element)
-            if (repeated == 1):
+            if repeated == 1:
                 copyData.append(data[i])
 
         size1 = len(copyData)

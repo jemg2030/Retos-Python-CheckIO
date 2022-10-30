@@ -43,8 +43,7 @@ Ejemplo:
 
 
 def sum_numbers(text: str) -> int:
-    # your code here
-    return 0
+    return sum((int(word) for word in text.split() if word.isdigit()))
 
 
 if __name__ == '__main__':
