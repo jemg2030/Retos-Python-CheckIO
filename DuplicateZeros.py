@@ -69,7 +69,12 @@ from collections.abc import Iterable
 
 def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
     # your code here
-    return []
+    new_donuts = []
+    for num in donuts:
+        new_donuts.append(num)
+        if num == 0:
+            new_donuts.append(0)
+    return new_donuts
 
 
 print("Example:")
