@@ -53,8 +53,6 @@ assert primera_palabra("saludos, amigos") == "saludos"
 Cómo se utiliza: la primera palabra es un comando en una línea de comandos
 
 Condición previa: el texto puede contener a-z A-Z , . '
-
-Traducción realizada con la versión gratuita del traductor www.DeepL.com/Translator
 '''
 
 

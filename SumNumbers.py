@@ -1,5 +1,4 @@
 '''
-
 In a given text you need to sum the numbers while excluding any digits that form part of a word.
 
 The text consists of numbers, spaces and letters from the English alphabet.
@@ -38,7 +37,6 @@ Ejemplo:
  'Petersen entre 1845 y 1910 año') == 3755
 5 sum_numbers('5 más 6 es') == 11
 6 sum_numbers('') == 0
-
 '''
 
 

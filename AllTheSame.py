@@ -1,5 +1,4 @@
 '''
-
 In this mission you should check if all elements in the given list are equal.
 
 Input: List.
@@ -26,7 +25,6 @@ Precondición: todos los elementos de la lista de entrada son hashable
 
 https://dbader.org/
 https://github.com/oduvan/checkio-mission-all-the-same
-
 '''
 
 from typing import List, Any

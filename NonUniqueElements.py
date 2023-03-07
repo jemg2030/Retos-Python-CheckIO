@@ -1,5 +1,4 @@
 '''
-
 If you have 50 different plug types, appliances wouldn't be available and would be very expensive. But once an electric
 outlet becomes standardized, many companies can design appliances, and competition ensues, creating variety and better
 prices for consumers.
@@ -52,7 +51,6 @@ necesitas esclarecer estadísticas removiendo elementos de baja frecuencia (ruid
 
 Pre-condición:
 0 < |X| < 1000
-
 '''
 
 

@@ -1,5 +1,4 @@
 '''
-
 Almost everyone in the world knows about the ancient game Chess and has at least a basic understanding of its rules. It
 has various units with a wide range of movement patterns allowing for a huge number of possible different game positions
 (for example Number of possible chess games at the end of the n-th plies. ) For this mission, we will examine the
@@ -74,7 +73,6 @@ Este concepto mostrará cómo se puede hacer esto en las posiciones de figuras d
 
 Condición previa:
 0 < peones ≤ 8
-
 '''
 
 
