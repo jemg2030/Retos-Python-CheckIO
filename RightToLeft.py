@@ -69,8 +69,8 @@ Precondición:
 
 def left_join(phrases: tuple[str]) -> str:
     # your code here
-    return ""
-
+    # replace all occurrences of 'right' with 'left'
+        return ",".join([phrase.replace("right", "left") for phrase in phrases])
 
 print("Example:")
 print(left_join(("left", "right", "left", "stop")))
