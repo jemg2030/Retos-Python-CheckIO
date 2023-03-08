@@ -70,7 +70,15 @@ from typing import Iterable
 
 def frequency_sort(items: list[str | int]) -> Iterable[str | int]:
     # your code here
-    return items
+    # Count the frequency of each element
+    freq = {}
+    for item in items:
+        freq[item] = freq.get(item, 0) + 1
+
+    # Sort the elements by their frequency and original order
+    sorted_items = sorted(items, key=lambda x: (-freq[x], items.index(x)))
+
+    return sorted_items
 
 
 print("Example:")
