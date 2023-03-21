@@ -63,7 +63,6 @@ Cómo se utiliza: Para analizar datos utilizando la estadística matemática y e
 matemático, y para encontrar tendencias y predecir cambios futuros (sistemas, fenómenos, etc.).
 
 Precondiciones:
-
 longitud lista <= 100;
 número máximo <= 100.
 '''

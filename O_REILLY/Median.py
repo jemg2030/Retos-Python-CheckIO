@@ -26,7 +26,6 @@ is weird value and does nothing to show us the real picture. In this case the me
 useful value and a better picture. The Article at Wikipedia.
 
 Preconditions:
-
 1 < len(data) ≤ 1000
 all(0 ≤ x < 10 ** 6 for x in data)
 

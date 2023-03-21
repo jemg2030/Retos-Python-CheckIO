@@ -89,8 +89,6 @@ La matriz de pulsar el botón no tiene elementos repetidos (lo que significa que
 La cantidad de elementos es siempre par (la luz se apagará eventualmente)
 La fecha mínima posible es 1970-01-01
 La fecha máxima posible es 9999-12-31
-
-Traducción realizada con la versión gratuita del traductor www.DeepL.com/Translator
 '''
 
 
