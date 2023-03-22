@@ -67,6 +67,7 @@ def count_inversion(sequence):
                 inversions += 1
     return inversions
 
+
 if __name__ == '__main__':
     print("Example:");
     print(count_inversion([1, 2, 5, 3, 4, 7, 6]));
