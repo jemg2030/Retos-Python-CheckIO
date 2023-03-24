@@ -38,7 +38,25 @@ El texto sólo contiene caracteres ASCII.
 
 def longest_palindromic(a):
     # your code here
-    return None
+    """
+        Finds the longest palindromic substring of a given string.
+
+        Args:
+            a: A string.
+
+        Returns:
+            The longest palindromic substring.
+        """
+    n = len(a)
+    max_len = 0
+    start = 0
+    for i in range(n):
+        for j in range(i, n):
+            if a[i:j + 1] == a[i:j + 1][::-1]:
+                if j - i + 1 > max_len:
+                    max_len = j - i + 1
+                    start = i
+    return a[start:start + max_len]
 
 
 if __name__ == '__main__':
