@@ -51,28 +51,28 @@ assert grupos_ordenados([5, 5, 1]) == [5, 5, 1]
 
 def sorted_groups(items: list[int]) -> list[int]:
     # your code here
-    groups = []
-    current_group = []
+    output = []
+    group = []
+    order = None
 
-    # recorrer la lista
-    for i in range(len(items)):
-        # si el elemento actual es igual al elemento anterior, agregarlo al grupo actual
-        if i > 0 and items[i] == items[i - 1]:
-            current_group.append(items[i])
-        # si el elemento actual es diferente al elemento anterior, agregar el grupo actual a la lista de grupos
+    for x in items:
+        if len(group) == 0 or x == group[0]:
+            group.append(x)
         else:
-            if current_group:
-                groups.append(current_group)
-            # crear un nuevo grupo con el elemento actual
-            current_group = [items[i]]
-    # agregar el último grupo a la lista de grupos
-    if current_group:
-        groups.append(current_group)
+            if order is None:
+                order = group[0] < x
+            elif (group[0] < x) != order:
+                group.sort(reverse=not order)
+                output.extend(group)
+                group = []
 
-    # ordenar los grupos y concatenarlos en una lista ordenada
-    sorted_items = [elem for group in sorted(groups, key=len) for elem in group]
+            group.append(x)
 
-    return sorted_items
+    if group:
+        group.sort(reverse=not order)
+        output.extend(group)
+
+    return output
 
 
 # These "asserts" are used for self-checking
