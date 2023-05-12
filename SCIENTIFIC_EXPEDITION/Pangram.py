@@ -52,6 +52,7 @@ all(ch in (cadena.puntuación + cadena.ascii_letras + " ") for ch in texto);
 0 < len(texto).
 '''
 
+
 import string
 
 
