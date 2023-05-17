@@ -67,7 +67,11 @@ all(ch in string.printable for ch in text)
 
 def find_message(message: str) -> str:
     # your code here
-    return None
+    secret_message = ''
+    for char in message:
+        if char.isupper():
+            secret_message += char
+    return secret_message
 
 
 if __name__ == '__main__':
