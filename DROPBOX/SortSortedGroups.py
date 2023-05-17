@@ -46,6 +46,8 @@ assert grupos_ordenados([]) == []
 assert grupos_ordenados([5]) == [5]
 assert grupos_ordenados([5, 1, 5, 0, 5]) == [5, 5, 0, 5, 1]
 assert grupos_ordenados([5, 5, 1]) == [5, 5, 1]
+
+https://py.checkio.org/mission/sort-sorted-groups/publications/category/clear/
 '''
 
 
