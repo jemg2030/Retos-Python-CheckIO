@@ -51,36 +51,36 @@ assert grupos_ordenados([5, 5, 1]) == [5, 5, 1]
 
 def sorted_groups(items: list[int]) -> list[int]:
     # your code here
-    result = []
-    i = 0
-    n = len(items)
-
-    while i < n:
-        j = i + 1
-
-        # find the end of the sorted group
-        while j < n and items[j] >= items[j - 1]:
-            j += 1
-
-        # sort the sorted group according to its order
-        if j - i > 1:
-            if items[i] < items[j - 1]:
-                result.append(sorted(items[i:j]))
-            else:
-                result.append(sorted(items[i:j], reverse=True))
+    if not items:
+        return items
+    it = iter(items)
+    direction, stack = 0, [[next(it)]]
+    for i in it:
+        prev, prev_dir = stack[-1][-1], direction
+        direction = (prev < i) - (i < prev) or prev_dir
+        if prev_dir and prev_dir != direction:
+            direction = bool(stack.append([i]))
         else:
-            result.append([items[i]])
+            stack[-1].append(i)
+    stack.sort()
+    return [x for it in stack for x in it]
 
-        i = j
 
-    # flatten the result list
-    return [x for group in result for x in group]
-
+print("Example:")
+print(sorted_groups([5, 1, 5, 0, 5]))
 
 # These "asserts" are used for self-checking
 assert sorted_groups([]) == []
+print(sorted_groups([]) == [])
+print(sorted_groups([]))
 assert sorted_groups([5]) == [5]
+print(sorted_groups([5]) == [5])
+print(sorted_groups([5]))
 assert sorted_groups([5, 1, 5, 0, 5]) == [5, 5, 0, 5, 1]
+print(sorted_groups([5, 1, 5, 0, 5]) == [5, 5, 0, 5, 1])
+print(sorted_groups([5, 1, 5, 0, 5]))
 assert sorted_groups([5, 5, 1]) == [5, 5, 1]
+print(sorted_groups([5, 5, 1]) == [5, 5, 1])
+print(sorted_groups([5, 5, 1]))
 
 print("The mission is done! Click 'Check Solution' to earn rewards!")
