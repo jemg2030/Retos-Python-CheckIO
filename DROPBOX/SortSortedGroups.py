@@ -46,33 +46,26 @@ assert grupos_ordenados([]) == []
 assert grupos_ordenados([5]) == [5]
 assert grupos_ordenados([5, 1, 5, 0, 5]) == [5, 5, 0, 5, 1]
 assert grupos_ordenados([5, 5, 1]) == [5, 5, 1]
+
+https://py.checkio.org/mission/sort-sorted-groups/publications/category/clear/
 '''
 
 
 def sorted_groups(items: list[int]) -> list[int]:
     # your code here
-    output = []
-    group = []
-    order = None
-
-    for x in items:
-        if len(group) == 0 or x == group[0]:
-            group.append(x)
+    if not items:
+        return items
+    it = iter(items)
+    direction, stack = 0, [[next(it)]]
+    for i in it:
+        prev, prev_dir = stack[-1][-1], direction
+        direction = (prev < i) - (i < prev) or prev_dir
+        if prev_dir and prev_dir != direction:
+            direction = bool(stack.append([i]))
         else:
-            if order is None:
-                order = group[0] < x
-            elif (group[0] < x) != order:
-                group.sort(reverse=not order)
-                output.extend(group)
-                group = []
-
-            group.append(x)
-
-    if group:
-        group.sort(reverse=not order)
-        output.extend(group)
-
-    return output
+            stack[-1].append(i)
+    stack.sort()
+    return [x for it in stack for x in it]
 
 
 # These "asserts" are used for self-checking
