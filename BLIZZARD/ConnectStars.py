@@ -62,7 +62,7 @@ Condición previa:
 '''
 
 
-from typing import List, Tuple, Iter
+from typing import List, Tuple, Iterable
 
 def connect_stars(coords: List[Tuple[int, int]]) -> Iterable[Tuple[int, int]]:
     # your code here
