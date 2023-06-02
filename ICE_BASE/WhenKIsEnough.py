@@ -38,11 +38,21 @@ Esta tarea está tomada del curso CCPS 109 Computer Science I, impartido por Ilk
 
 
 from typing import Iterable, Any
+from collections import defaultdict
 
 
 def remove_after_kth(items: list[Any], k: int) -> Iterable[Any]:
     # your code here
-    return []
+    counts = defaultdict(int)  # Dictionary to store element counts
+    output = []  # Output list
+
+    for item in items:
+        count = counts[item]  # Get the current count of the element
+        if count < k:  # Append the element if the count is less than 'k'
+            output.append(item)
+            counts[item] += 1
+
+    return output
 
 
 print("Example:")
