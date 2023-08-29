@@ -4,8 +4,7 @@
     <option name="enabledOnReformat" value="true" />
     <option name="enabledOnSave" value="true" />
     <option name="executionMode" value="BINARY" />
-    <option name="pathToExecutable" value="C:\Anaconda\Scripts\black.exe" />
-    <option name="sdkUUID" value="d15bc589-8cef-4663-bff0-ab8c01b33f91" />
+    <option name="sdkUUID" value="abcc6d5b-6e7d-45ad-95d5-eabb9402886f" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (Retos-Python-CheckIO)" project-jdk-type="Python SDK" />
 </project>
