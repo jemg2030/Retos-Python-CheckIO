@@ -35,42 +35,45 @@ km con motor eléctrico", mantén el mensaje de fracaso sin cambios.
 
 # show me some OOP magic here
 class Car:
-    def __init__(self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
-        self.fuel_used = 0  # Added fuel_used attribute with initial value of 0 liters
+    wheels = "four"
+    doors = 4
+    working_engine = False
 
-
-class Car:
-    def __init__(self, make, model, year, fuel_consumption=7):
-        self.make = make
-        self.model = model
-        self.year = year
+    def __init__(self, name, color, price, fuel_consumption=7):
+        self.name = name
+        self.color = color
+        self.price = price
         self.fuel_used = 0
-        self.fuel_consumption = fuel_consumption  # Added fuel_consumption attribute with default value of 7 liters/100 km
+        self.fuel_consumption = fuel_consumption
+
+    def start_engine(self):
+        print("Engine has started")
+        self.working_engine = True
+
+    def stop_engine(self):
+        print("Engine has stopped")
+        self.working_engine = False
 
     def drive(self, distance):
-        if self.fuel_used == 0:
-            print("Start the car before driving!")
-        else:
-            fuel_used_for_trip = distance * self.fuel_consumption / 100
-            self.fuel_used += fuel_used_for_trip
+        if self.working_engine:
+            self.fuel_used += (self.fuel_consumption * distance) / 100
             print(
                 f"Currently driven {distance} km, total fuel used - {self.fuel_used:.2f} l"
             )
+        else:
+            print("Start the car before driving!")
 
 
 class ElectricCar(Car):
     def drive(self, distance):
-        if self.fuel_used == 0:
+        if self.working_engine:
             print("Start the car before driving!")
         else:
             print(f"Currently driven {distance} km on electric motor")
 
 
-# test_car = Car()
-my_car = Car()
+test_car = Car(name="Test Car", color="Red", price=15000, fuel_consumption=10)
+test_car = Car(name="Test Car", color="Red", price=15000)
 # Creating 'my_car' instance of the Car class with the required arguments
 my_car = Car(name="Toyota Corolla", color="Blue", price=25000)
 # Creating 'my_car' instance of the Car class with the required arguments
